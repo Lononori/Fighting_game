@@ -9,4 +9,40 @@ public class Enemy {
         health = 15;
         damage = 5;
     }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public Item getDrop() {
+        return drop;
+    }
+
+    public void setDrop(Item drop) {
+        this.drop = drop;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getDamage() {
+        return damage;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public void takeDamage(int playerDamage){
+        setHealth(health - playerDamage);
+    }
 }
