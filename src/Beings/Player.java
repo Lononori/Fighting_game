@@ -1,3 +1,9 @@
+package Beings;
+
+import Items.Armour;
+import Items.Useable;
+import Items.Weapon;
+
 import java.util.*;
 
 public class Player {
@@ -7,7 +13,8 @@ public class Player {
     private List<Useable> inventory = new ArrayList<>();
     private Weapon equippedWeapon;
     private Armour equippedArmour;
-    public Player(){
+
+    public Player() {
         health = 100;
         level = 1;
         xp = 0;
@@ -63,7 +70,13 @@ public class Player {
         this.equippedWeapon = equippedWeapon;
     }
 
-    public void Attack(){
+    /**
+     * This is a terrible methord that doesnt fucking work and i really wish i knew how to program in java....
+     * <p>
+     * Its meant to take the attack by the player based on their equipped weapon and minus the damage from the health
+     * of the current enemy It doesnt work
+     */
+    public void Attack() {
         int ouch = equippedWeapon.getDamage();
         Enemy.takeDamage(ouch);
 

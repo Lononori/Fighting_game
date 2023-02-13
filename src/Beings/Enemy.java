@@ -1,3 +1,7 @@
+package Beings;
+
+import Items.Item;
+
 public class Enemy {
     private int health;
     private int damage;
@@ -42,6 +46,12 @@ public class Enemy {
         this.damage = damage;
     }
 
+    /**
+     * This is my small function that works but also somehow doesnt.... Wait wheres my error gone
+     * Dont vanish like that error that worries me
+     *
+     * @param playerDamage
+     */
     public void takeDamage(int playerDamage){
         setHealth(health - playerDamage);
     }

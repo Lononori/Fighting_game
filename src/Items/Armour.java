@@ -1,4 +1,6 @@
-public class Armour extends Item{
+package Items;
+
+public class Armour extends Item {
     private String name;
     private int damageReduction;
     public Armour(){

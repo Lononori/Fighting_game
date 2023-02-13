@@ -1,4 +1,6 @@
-public class Weapon extends Item{
+package Items;
+
+public class Weapon extends Item {
     private int damage;
     private String name;
     private int critPercent;

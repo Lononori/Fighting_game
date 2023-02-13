@@ -1,3 +1,5 @@
+package Items;
+
 public class Useable extends Item {
     private String name;
     private enum type{
