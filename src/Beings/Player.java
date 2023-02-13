@@ -66,19 +66,45 @@ public class Player {
         return equippedWeapon;
     }
 
+    @Override
+    public String toString() {
+        return "Player{" +
+                "health=" + health +
+                ", level=" + level +
+                ", xp=" + xp +
+                ", inventory=" + inventory +
+                ", equippedWeapon=" + equippedWeapon +
+                ", equippedArmour=" + equippedArmour +
+                '}';
+    }
+
     public void setEquippedWeapon(Weapon equippedWeapon) {
         this.equippedWeapon = equippedWeapon;
     }
 
     /**
      * This is a terrible methord that doesnt fucking work and i really wish i knew how to program in java....
-     * <p>
      * Its meant to take the attack by the player based on their equipped weapon and minus the damage from the health
      * of the current enemy It doesnt work
+     * <p>
+     * It works now, im happy.
      */
-    public void Attack() {
-        int ouch = equippedWeapon.getDamage();
-        Enemy.takeDamage(ouch);
+    public void attack(Enemy currentEnemy) {
+        currentEnemy.takeDamage(equippedWeapon.getDamage());
 
+    }
+
+    /**
+     * So this meathord gets the damage of the current enemy and defence stat of the current armour then minuses the
+     * defence stat from the damage from the enemy
+     * Fuck ive just noticed a error
+     * What if the armour is better than the damage....
+     * If statement time
+     * @param currentEnemy this is the current enemy
+     */
+    public void takedamage(Enemy currentEnemy){
+        if (currentEnemy.getDamage()>equippedArmour.getDamageReduction()) {
+            health -= (currentEnemy.getDamage() - equippedArmour.getDamageReduction());
+        }
     }
 }

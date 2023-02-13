@@ -50,9 +50,9 @@ public class Enemy {
      * This is my small function that works but also somehow doesnt.... Wait wheres my error gone
      * Dont vanish like that error that worries me
      *
-     * @param playerDamage
+     * @param playerDamage its the damage the player does based on thw equipped weapon
      */
-    public void takeDamage(int playerDamage){
+    public void takeDamage(int playerDamage) {
         setHealth(health - playerDamage);
     }
 }
