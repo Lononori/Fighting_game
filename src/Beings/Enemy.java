@@ -11,8 +11,9 @@ public class Enemy {
     public Enemy(){
         name = "Karen";
         health = 15;
-        damage = 5;
+        damage = 50;
     }
+
 
     public int getHealth() {
         return health;
@@ -54,5 +55,18 @@ public class Enemy {
      */
     public void takeDamage(int playerDamage) {
         setHealth(health - playerDamage);
+    }
+    public boolean checkAlive(){
+        return health <= 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Enemy{" +
+                "health=" + health +
+                ", damage=" + damage +
+                ", name='" + name + '\'' +
+                ", drop=" + drop +
+                '}';
     }
 }

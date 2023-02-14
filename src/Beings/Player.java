@@ -3,7 +3,6 @@ package Beings;
 import Items.Armour;
 import Items.Useable;
 import Items.Weapon;
-
 import java.util.*;
 
 public class Player {
@@ -11,7 +10,7 @@ public class Player {
     private int level;
     private long xp;
     private List<Useable> inventory = new ArrayList<>();
-    private Weapon equippedWeapon;
+    public Weapon equippedWeapon;
     private Armour equippedArmour;
 
     public Player() {
@@ -107,16 +106,19 @@ public class Player {
             health -= (currentEnemy.getDamage() - equippedArmour.getDamageReduction());
         }
     }
-    public void action(String ui){
-        switch(ui){
-            case "Attack":
-                break;
-            case "Usable":
-
-                break;
-            default:
-                System.out.println("Well it seems you cant spell well enough to do anything... he coming for ya...");
-                break;
+    public void action(Scanner in,Enemy currentEnemy){
+        String ui = in.nextLine();
+        switch (ui) {
+            case "Attack" -> attack(currentEnemy);
+            case "Usable" -> selectUsable();
+            default ->
+                    System.out.println("Well it seems you cant spell well enough to do anything... he coming for ya...");
         }
+    }
+    public boolean checkAlive(){
+        return health <= 0;
+    }
+    public void selectUsable(){
+        System.out.println("Please select usable");
     }
 }
