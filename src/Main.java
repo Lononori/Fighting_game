@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import Beings.Enemy;
 import Beings.Player;
 
@@ -7,6 +8,7 @@ public class Main {
         Enemy currentEnemy = new Enemy();
         Player player = new Player();
         System.out.println(player.toString());
+        switch()
         player.takedamage(currentEnemy);
         System.out.println(player.toString());
 

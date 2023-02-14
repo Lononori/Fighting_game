@@ -107,4 +107,16 @@ public class Player {
             health -= (currentEnemy.getDamage() - equippedArmour.getDamageReduction());
         }
     }
+    public void action(String ui){
+        switch(ui){
+            case "Attack":
+                break;
+            case "Usable":
+
+                break;
+            default:
+                System.out.println("Well it seems you cant spell well enough to do anything... he coming for ya...");
+                break;
+        }
+    }
 }

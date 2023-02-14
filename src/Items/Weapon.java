@@ -9,6 +9,12 @@ public class Weapon extends Item {
         damage = 5;
         critPercent = 1;
     }
+    public Weapon(String name,int damage,int critPercent){
+        this.name = name;
+        this.damage = damage;
+        this.critPercent =critPercent;
+
+    }
 
     public int getCritPercent() {
         return critPercent;

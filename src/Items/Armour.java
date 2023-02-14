@@ -7,6 +7,10 @@ public class Armour extends Item {
         name = "Chef's outfit";
         damageReduction = 0;
     }
+    public Armour(String name, int damageReduction){
+        this.name = name;
+        this.damageReduction = damageReduction;
+    }
 
     public int getDamageReduction() {
         return damageReduction;
