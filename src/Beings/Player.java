@@ -107,6 +107,9 @@ public class Player {
         }
     }
     public void action(Scanner in,Enemy currentEnemy){
+        System.out.println("Please Choose a option:");
+        System.out.println("Attack");
+        System.out.println("Useable");
         String ui = in.nextLine();
         switch (ui) {
             case "Attack" -> attack(currentEnemy);

@@ -2,17 +2,36 @@ package Beings;
 
 import Items.Item;
 
+import java.util.Random;
+
 public class Enemy {
     private int health;
     private int damage;
+    private int damagePercent;
     private String name;
     private Item drop;
+    private Enemy karen = new Enemy("Karen",0,0,50) ;
+    private Enemy fryingPan = new Enemy("Frying Pan",0,0,0);
+    private Enemy ramsey = new Enemy("Gordon Ramsey",0,0,10);
+    private Enemy goat = new Enemy("Goat",0,0,5);
+    private Enemy starr = new Enemy("Andy Starr", 0, 0,25);
+
+    public Enemy[] enemies = {karen,fryingPan,ramsey,goat,starr};
+    Random rand = new Random();
 
     public Enemy(){
         name = "Karen";
         health = 15;
         damage = 50;
     }
+    public Enemy (String name,int health,int damage,int damagePercent){
+        this.name = name;
+        this.health = health;
+        this.damage = damage;
+        this.damagePercent = damagePercent;
+    }
+
+
 
 
     public int getHealth() {
@@ -20,7 +39,7 @@ public class Enemy {
     }
 
     public void setHealth(int health) {
-        this.health = health;
+        this.health = health/2;
     }
 
     public Item getDrop() {
@@ -44,7 +63,7 @@ public class Enemy {
     }
 
     public void setDamage(int damage) {
-        this.damage = damage;
+        this.damage = damage/2;
     }
 
     /**
